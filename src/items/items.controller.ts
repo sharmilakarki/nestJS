@@ -1,39 +1,42 @@
-import { Controller,Get ,Post, Put, Delete, Body, Param} from '@nestjs/common';
-import {ItemsService} from './items.service';
-import {CreateItemDto} from './dto/create-item-dto';
-import {Item} from './interfaces/item.interface';
+import { Controller, Get, Post, Put, Delete, Body, Param } from '@nestjs/common';
+import { ItemsService } from './items.service';
+// import {CreateItemDto} from './dto/create-item-dto';
+import { Item } from '../items/item.entity';
+import { CreateItemDto } from './dto/create-item-dto';
 
 @Controller('items')
 export class ItemsController {
 
     //inject dependencies
-    constructor(private readonly itemsService: ItemsService) {}
+    constructor(private readonly itemsService: ItemsService) { }
 
     @Get()
-    findAll(): Item[]{
-       // console.log((ur)
+    findAll(): Promise<Item[]> {
+        // console.log((ur)
         return this.itemsService.findAll();
     }
 
     @Post()
-    create(@Body() createItemDto: CreateItemDto): string{
-        return `Name: ${createItemDto.name} Desc: ${createItemDto.description}`;
+    create(@Body() dto: Item): Promise<Item> {
+        //return `Name: ${createItemDto.name} Desc: ${createItemDto.description}`;
+        return this.itemsService.create(dto);
     }
 
     @Get(':id')
-    findOne(@Param('id') id): Item{
-      //  return `id: ${id}`;
-      return this.itemsService.findOne(id);
+    findOne(@Param('id') id): Promise<Item> {
+        //  return `id: ${id}`;
+        return this.itemsService.findOne(id);
     }
 
     @Delete(':id')
-    delete(@Param('id') id){
-        return `Deleted id ${id}`;
+    delete(@Param('id') id) {
+        // return `Deleted id ${id}`;
+        return this.itemsService.delete(id);
     }
 
     @Put(':id')
-    update(@Body() updateDto: CreateItemDto, @Param('id') id){
-        return  `Update name ${updateDto.name}`;
+    update(@Body() updateDto: CreateItemDto, @Param('id') id): Promise<Item> {
+        return this.itemsService.update(updateDto, id);
     }
- }
+}
 

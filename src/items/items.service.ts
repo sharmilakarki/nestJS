@@ -1,35 +1,47 @@
-import { Injectable } from '@nestjs/common';
-import {Item} from './interfaces/item.interface';
+import { Injectable, Inject } from '@nestjs/common';
+import { Item } from './item.entity';
+import { CreateItemDto } from './dto/create-item-dto';
 
 
 @Injectable()
 export class ItemsService {
- private readonly items: Item[] = [
-    {
-        id:"123332",
-        name:"Mouse",
-        quantity: 500,
-        description: "One item"
-    },
-    {
-        id:"123332",
-        name:"Monitor",
-        quantity: 500,
-        description: "another item"
-    },
-    {
-        id: "123332",
-        name:"Keyboard",
-        quantity: 500,
-        description: "another another item"
+
+    constructor(@Inject('ITEMS_REPOSITORY') private readonly itemsRepository: typeof Item) { }
+
+    async findAll(): Promise<Item[]> {
+        return await this.itemsRepository.findAll<Item>();
     }
-]
 
-findAll(): Item[]{
-    return this.items;
-}
+    async findOne(id: number): Promise<Item> {
+        return await this.itemsRepository.findOne({
+            where: {
+                id: id
+            }
+        });
+    }
 
-findOne(id: string): Item{
-    return this.items.find(item=> item.id===id);
-}
+    async create(item: Item): Promise<Item> {
+        const savedItem = new this.itemsRepository(item);
+        return await savedItem.save();
+    }
+
+    async delete(id: number) {
+        const item = await this.findOne(id);
+        return item.destroy();
+    }
+
+    async update(dto: CreateItemDto, id: number): Promise<Item> {
+        const item = this.findOne(id);
+        // (await item).update({
+        //     name: dto.name, description: dto.description, quantity: dto.quantity
+        // });
+       
+        // return (await item).save();
+       
+        (await item).name=dto.name;
+        (await item).description=dto.description;
+        (await item).quantity=dto.quantity;
+       
+        return (await item).save();
+    }
 }

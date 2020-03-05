@@ -11,16 +11,15 @@ const app_controller_1 = require("./app.controller");
 const app_service_1 = require("./app.service");
 const items_controller_1 = require("./items/items.controller");
 const items_service_1 = require("./items/items.service");
-const mongoose_1 = require("@nestjs/mongoose");
 const items_module_1 = require("./items/items.module");
-const keys_1 = require("./config/keys");
+const items_providers_1 = require("./items/items.providers");
 let AppModule = class AppModule {
 };
 AppModule = __decorate([
     common_1.Module({
-        imports: [items_module_1.ItemsModule, mongoose_1.MongooseModule.forRoot(keys_1.default.mongoURI)],
+        imports: [items_module_1.ItemsModule],
         controllers: [app_controller_1.AppController, items_controller_1.ItemsController],
-        providers: [app_service_1.AppService, items_service_1.ItemsService],
+        providers: [app_service_1.AppService, items_service_1.ItemsService, ...items_providers_1.itemsProviders],
     })
 ], AppModule);
 exports.AppModule = AppModule;

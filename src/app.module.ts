@@ -3,14 +3,14 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { ItemsController } from './items/items.controller';
 import { ItemsService } from './items/items.service';
-import {MongooseModule} from '@nestjs/mongoose'
-import {ItemsModule} from './items/items.module'
-import config from './config/keys'
+import { ItemsModule } from './items/items.module';
+import { itemsProviders } from './items/items.providers';
+
+
 
 @Module({
-  //imports: [ItemsModule,MongooseModule.forRoot('mongodb://localhost:27017/nest')],
-  imports: [ItemsModule,MongooseModule.forRoot(config.mongoURI)],
+  imports: [ItemsModule],
   controllers: [AppController, ItemsController],
-  providers: [AppService, ItemsService],
+  providers: [AppService, ItemsService,...itemsProviders],
 })
 export class AppModule {}

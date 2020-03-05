@@ -9,13 +9,15 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const common_1 = require("@nestjs/common");
 const items_controller_1 = require("./items.controller");
 const items_service_1 = require("./items.service");
+const database_module_1 = require("../config/database.module");
+const items_providers_1 = require("./items.providers");
 let ItemsModule = class ItemsModule {
 };
 ItemsModule = __decorate([
     common_1.Module({
-        imports: [],
+        imports: [database_module_1.DatabaseModule],
         controllers: [items_controller_1.ItemsController],
-        providers: [items_service_1.ItemsService],
+        providers: [items_service_1.ItemsService, ...items_providers_1.itemsProviders,],
     })
 ], ItemsModule);
 exports.ItemsModule = ItemsModule;
