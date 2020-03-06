@@ -1725,24 +1725,36 @@
         "version": "09eec98b368e47af834c1d1ef97999506ee1ebec34e000c11dc0a1963c8a0320",
         "signature": "09eec98b368e47af834c1d1ef97999506ee1ebec34e000c11dc0a1963c8a0320"
       },
+      "../src/purchase/purchase.entity.ts": {
+        "version": "2cf9841012d79775dfffb857d882fa3bc7333612e28d04d9aa1304977944940e",
+        "signature": "4fdabd7dcfc414b39640bbf74e3ef237c5ee20f7a03d0092c53a5c08a682d580"
+      },
+      "../src/purchase/dto/purchase.dto.ts": {
+        "version": "bf4fd7b7810e2323e1e939f0550f2b3f52c4315ddf95db10c7cebab207d9442a",
+        "signature": "ae99e3fbf9908b34920c7081e3415b14123fb49b20e0d7e0d0a8731c7691ac36"
+      },
+      "../src/purchase/purchase.service.ts": {
+        "version": "e76a219a0693052784da749a01db901a15a107574bcdf611d543bb7e948be3d2",
+        "signature": "965234ba801b5bfe1ee908def91cdf707f580f93989d5def31431f35dbda112d"
+      },
       "../src/items/item.entity.ts": {
-        "version": "7e3bcf8af5789e8ff1b51648923ba9764d0cacf8a2b370307b0bc6ccb3be05d5",
-        "signature": "61732ad82ab5cb3a40f8c29fc93dad8b7867ebad42d570c7a762f3eb8c5d858d"
+        "version": "1884065a32bb36a92a17fc4c359d5f139fb9279b439c1cbc32986c383917768b",
+        "signature": "1546264e3c1bf06f299e6a3bc5a692958f50b1f6437b4aaf81e4db3ee149fffe"
       },
       "../src/items/dto/create-item-dto.ts": {
         "version": "b476d1f3c6a857830cacbd1b89a083478729fc6d1f0af3f6f81d706d4df1b1f7",
         "signature": "4f2d6f48454135015c56454720b01df9e11c238b4809c09ee58e42f4086acb7a"
       },
       "../src/items/items.service.ts": {
-        "version": "656bdd3ce5ce998e87f9a292045b6a3c11e59a7fc5fa1f11f4c1cbcb44931de0",
-        "signature": "5c74eb34b37377ba081cf4e96d79063407e6ad63192e3de74a7258713927aca9"
+        "version": "5d2825157e36de49a8f2674f51e0d327181a47f64b6bfe17536df92d5ea617a6",
+        "signature": "0b5584d7327d3cb3349e8b9a802e232afa64895eb691259c2bea1673b99ca42c"
       },
       "../src/items/items.controller.ts": {
         "version": "fe20e71afe79e0c5e3eb349c570a6c0b476d8a2d3abc7868e207d3cb455ec9b2",
         "signature": "80ab14a589ee7186ba7263122915ecac9f818af13b23e47223a0db182ab804c0"
       },
       "../src/config/database.providers.ts": {
-        "version": "16fa2f045948c5a43e942dc26e18d4121fb5699c20e225bcd9e6558e6789af27",
+        "version": "d321bfea584d873677bddda5151a67c13926b9c254e59acbc06a421b556a7713",
         "signature": "01ee40d29ef52833c83f189c23367c2214db7612323bc68a4e57dc094c16be7e"
       },
       "../src/config/database.module.ts": {
@@ -1757,8 +1769,20 @@
         "version": "551cf2873a625ff28e5628a14ce7c6474d3683bcc0fa14bd35e99a780575fe99",
         "signature": "b771721abd39d3091c7e9d0f3978f05667fe414d082265020e61e63a2943a83a"
       },
+      "../src/purchase/purchase.controller.ts": {
+        "version": "fe0cc0dd74d1abdbbd5187e557f272cf6a3a5cc479d353fb203384b61547a2ad",
+        "signature": "7647d9b754cba3eb7d81d4cca5a13932078a36160e0fbc356b8916115196b89b"
+      },
+      "../src/purchase/purchase.providers.ts": {
+        "version": "0e2f6e9ac1d1d9fa275e58f2d1bf95f3cf4aacd264fda51411e3e435881e5abf",
+        "signature": "2a30e761cda0c12b8bd9a3ec5a7d5addb323451fff3258748286398095517470"
+      },
+      "../src/purchase/purchase.module.ts": {
+        "version": "cad9b382ddc30c2f89c43d808bfbd512f3637107209605e33efcb4fa6c89bb6d",
+        "signature": "717cacbdad00719ba3c6b289dc94672c8f95a5b8845bef00c745e8baa2c13621"
+      },
       "../src/app.module.ts": {
-        "version": "7961f8e6faeefc2a2e4f05dfea4ab35f486fc24af7fa164af16ffeccfd10da3c",
+        "version": "47c8af938ffec02f483f6903104dc4a35ce8060bc968b83062601a0aa1495d76",
         "signature": "b82491e2990291580288c5602d4c017238977749d52b17391f0e45d9a29be644"
       },
       "../node_modules/@nestjs/core/adapters/http-adapter.d.ts": {
@@ -5628,9 +5652,36 @@
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
+      "../src/purchase/purchase.entity.ts": [
+        "../node_modules/sequelize-typescript/dist/index.d.ts",
+        "../src/items/item.entity.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../src/purchase/dto/purchase.dto.ts": [
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../src/purchase/purchase.service.ts": [
+        "../src/purchase/purchase.entity.ts",
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../src/purchase/dto/purchase.dto.ts",
+        "../src/items/items.service.ts",
+        "../src/items/item.entity.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
       "../src/items/item.entity.ts": [
         "../node_modules/sequelize-typescript/dist/index.d.ts",
         "../node_modules/rxjs/index.d.ts",
+        "../src/purchase/purchase.service.ts",
+        "../src/purchase/purchase.entity.ts",
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/node/util.d.ts",
@@ -5664,6 +5715,7 @@
       "../src/config/database.providers.ts": [
         "../node_modules/sequelize-typescript/dist/index.d.ts",
         "../src/items/item.entity.ts",
+        "../src/purchase/purchase.entity.ts",
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/node/util.d.ts",
@@ -5695,6 +5747,36 @@
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
+      "../src/purchase/purchase.controller.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../src/purchase/purchase.entity.ts",
+        "../src/purchase/purchase.service.ts",
+        "../src/purchase/dto/purchase.dto.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../src/purchase/purchase.providers.ts": [
+        "../src/purchase/purchase.entity.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../src/purchase/purchase.module.ts": [
+        "../src/config/database.module.ts",
+        "../src/purchase/purchase.controller.ts",
+        "../src/purchase/purchase.service.ts",
+        "../src/purchase/purchase.providers.ts",
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../src/items/items.service.ts",
+        "../src/items/items.providers.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
       "../src/app.module.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
         "../src/app.controller.ts",
@@ -5703,6 +5785,10 @@
         "../src/items/items.service.ts",
         "../src/items/items.module.ts",
         "../src/items/items.providers.ts",
+        "../src/purchase/purchase.controller.ts",
+        "../src/purchase/purchase.service.ts",
+        "../src/purchase/purchase.providers.ts",
+        "../src/purchase/purchase.module.ts",
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/node/util.d.ts",
@@ -10082,7 +10168,17 @@
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
+      "../src/purchase/purchase.entity.ts": [
+        "../src/items/item.entity.ts",
+        "../node_modules/sequelize-typescript/dist/index.d.ts"
+      ],
+      "../src/purchase/purchase.service.ts": [
+        "../src/purchase/purchase.entity.ts",
+        "../src/items/item.entity.ts",
+        "../src/purchase/dto/purchase.dto.ts"
+      ],
       "../src/items/item.entity.ts": [
+        "../src/purchase/purchase.entity.ts",
         "../node_modules/sequelize-typescript/dist/index.d.ts"
       ],
       "../src/items/items.service.ts": [
@@ -10099,6 +10195,14 @@
       ],
       "../src/items/items.providers.ts": [
         "../src/items/item.entity.ts"
+      ],
+      "../src/purchase/purchase.controller.ts": [
+        "../src/purchase/purchase.service.ts",
+        "../src/purchase/purchase.entity.ts",
+        "../src/purchase/dto/purchase.dto.ts"
+      ],
+      "../src/purchase/purchase.providers.ts": [
+        "../src/purchase/purchase.entity.ts"
       ],
       "../node_modules/@nestjs/core/adapters/http-adapter.d.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
@@ -11447,13 +11551,19 @@
       "../node_modules/sequelize-typescript/dist/validation/validate.d.ts",
       "../node_modules/sequelize-typescript/dist/validation/validator.d.ts",
       "../node_modules/sequelize-typescript/dist/index.d.ts",
+      "../src/purchase/purchase.entity.ts",
+      "../src/purchase/dto/purchase.dto.ts",
       "../src/items/item.entity.ts",
       "../src/items/dto/create-item-dto.ts",
+      "../src/items/items.service.ts",
       "../src/items/items.controller.ts",
       "../src/config/database.providers.ts",
       "../src/config/database.module.ts",
       "../src/items/items.providers.ts",
       "../src/items/items.module.ts",
+      "../src/purchase/purchase.controller.ts",
+      "../src/purchase/purchase.providers.ts",
+      "../src/purchase/purchase.module.ts",
       "../src/app.module.ts",
       "../node_modules/@nestjs/core/adapters/http-adapter.d.ts",
       "../node_modules/@nestjs/core/adapters/index.d.ts",
@@ -11555,7 +11665,7 @@
       "../node_modules/@types/webpack/index.d.ts",
       "../node_modules/@types/yargs-parser/index.d.ts",
       "../node_modules/@types/yargs/index.d.ts",
-      "../src/items/items.service.ts"
+      "../src/purchase/purchase.service.ts"
     ]
   },
   "version": "3.8.2"

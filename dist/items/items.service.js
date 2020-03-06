@@ -42,6 +42,9 @@ let ItemsService = class ItemsService {
         (await item).quantity = dto.quantity;
         return (await item).save();
     }
+    async updateItem(item) {
+        return (await item).save();
+    }
 };
 ItemsService = __decorate([
     common_1.Injectable(),

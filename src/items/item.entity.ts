@@ -1,6 +1,8 @@
 
-import { Table, Column, Model, PrimaryKey, AutoIncrement } from "sequelize-typescript";
+import { Table, Column, Model, PrimaryKey, AutoIncrement, BelongsTo, HasMany } from "sequelize-typescript";
 import { generate } from "rxjs";
+import { PurchaseService } from "src/purchase/purchase.service";
+import { Purchase } from "src/purchase/purchase.entity";
 
 
 @Table
@@ -11,11 +13,16 @@ export class Item extends Model<Item>{
     description: string;
     @Column
     quantity: number;
+
+    @Column({
+        primaryKey: true,
+        autoIncrement: true,
+        autoIncrementIdentity: true
+    })
     
-    @PrimaryKey
-    @AutoIncrement
-    @Column
     id: number;
 
+    @HasMany(() => Purchase)
+    purchase: Purchase[];
 
 }

@@ -44,4 +44,7 @@ export class ItemsService {
        
         return (await item).save();
     }
+    async updateItem(item: Item){
+        return (await item).save();
+    }
 }

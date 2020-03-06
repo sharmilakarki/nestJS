@@ -8,4 +8,5 @@ export declare class ItemsService {
     create(item: Item): Promise<Item>;
     delete(id: number): Promise<void>;
     update(dto: CreateItemDto, id: number): Promise<Item>;
+    updateItem(item: Item): Promise<Item>;
 }

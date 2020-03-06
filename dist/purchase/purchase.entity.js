@@ -10,22 +10,17 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const sequelize_typescript_1 = require("sequelize-typescript");
-const purchase_service_1 = require("../purchase/purchase.service");
-const purchase_entity_1 = require("../purchase/purchase.entity");
-let Item = class Item extends sequelize_typescript_1.Model {
+const item_entity_1 = require("../items/item.entity");
+let Purchase = class Purchase extends sequelize_typescript_1.Model {
 };
 __decorate([
     sequelize_typescript_1.Column,
     __metadata("design:type", String)
-], Item.prototype, "name", void 0);
-__decorate([
-    sequelize_typescript_1.Column,
-    __metadata("design:type", String)
-], Item.prototype, "description", void 0);
+], Purchase.prototype, "purchaseType", void 0);
 __decorate([
     sequelize_typescript_1.Column,
     __metadata("design:type", Number)
-], Item.prototype, "quantity", void 0);
+], Purchase.prototype, "discountAmount", void 0);
 __decorate([
     sequelize_typescript_1.Column({
         primaryKey: true,
@@ -33,13 +28,18 @@ __decorate([
         autoIncrementIdentity: true
     }),
     __metadata("design:type", Number)
-], Item.prototype, "id", void 0);
+], Purchase.prototype, "id", void 0);
 __decorate([
-    sequelize_typescript_1.HasMany(() => purchase_entity_1.Purchase),
-    __metadata("design:type", Array)
-], Item.prototype, "purchase", void 0);
-Item = __decorate([
+    sequelize_typescript_1.ForeignKey(() => item_entity_1.Item),
+    sequelize_typescript_1.Column,
+    __metadata("design:type", Number)
+], Purchase.prototype, "itemId", void 0);
+__decorate([
+    sequelize_typescript_1.BelongsTo(() => item_entity_1.Item),
+    __metadata("design:type", item_entity_1.Item)
+], Purchase.prototype, "item", void 0);
+Purchase = __decorate([
     sequelize_typescript_1.Table
-], Item);
-exports.Item = Item;
-//# sourceMappingURL=item.entity.js.map
+], Purchase);
+exports.Purchase = Purchase;
+//# sourceMappingURL=purchase.entity.js.map
